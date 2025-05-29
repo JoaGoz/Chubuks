@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/styles.css";
 
 function Header() {
     return (
@@ -17,3 +18,5 @@ function Header() {
         </header>
     )
 }
+
+export default Header;
