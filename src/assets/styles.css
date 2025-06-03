@@ -1,42 +1,83 @@
+/* Header General */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #222;
-  color: white;
+  justify-content: space-between;
+  background-color: #2C1F5E; 
+  padding: 15px 25px;
 }
 
+/* Logo */
 .logo img {
-  width: 120px;
+  height: 50px; /* Ajusta según el tamaño real del logo */
 }
 
+/* Navegación */
 .nav ul {
-  display: flex;
   list-style: none;
-  gap: 1.5rem;
+  display: flex;
+  gap: 20px;
 }
 
-.nav ul li a {
+.nav a {
+  color: white;
   text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: transparent; /* Mismo color del header */
+}
+
+/* Botones de Registro e Inicio de Sesión */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.register-button, .login-button {
+  background-color: #4a90e2; /* Azul claro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-button:hover, .login-button:hover {
+  background-color: #357ab8; /* Azul más oscuro al hacer hover */
+}
+
+/* Contenedor de la franja púrpura */
+.phrase-banner {
+  background-color: #2F0434; /* Púrpura oscuro */
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Texto animado */
+.animated-text {
+  font-size: 24px;
   color: white;
   font-weight: bold;
+  position: relative;
+  animation: fade-slide 3s infinite ease-in-out;
 }
 
-.user-options button {
-  margin-left: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.login-btn {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-}
-
-.register-btn {
-  background-color: #ff5722;
-  color: white;
+/* Animación de desvanecimiento + desplazamiento */
+@keyframes fade-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
 }
