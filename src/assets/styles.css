@@ -1,18 +1,17 @@
-/* Header General */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #2C1F5E; 
   padding: 15px 25px;
 }
 
-/* Logo */
 .logo img {
-  height: 50px; /* Ajusta según el tamaño real del logo */
+  height: 50px; 
 }
 
-/* Navegación */
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -25,17 +24,17 @@
   font-size: 16px;
   padding: 8px 15px;
   border-radius: 5px;
-  background-color: transparent; /* Mismo color del header */
+  background-color: transparent; 
 }
 
-/* Botones de Registro e Inicio de Sesión */
+
 .auth-buttons {
   display: flex;
   gap: 10px;
 }
 
 .register-button, .login-button {
-  background-color: #4a90e2; /* Azul claro */
+  background-color: #4a90e2; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -45,19 +44,20 @@
 }
 
 .register-button:hover, .login-button:hover {
-  background-color: #357ab8; /* Azul más oscuro al hacer hover */
+  background-color: #357ab8; 
 }
 
-/* Contenedor de la franja púrpura */
+
 .phrase-banner {
-  background-color: #2F0434; /* Púrpura oscuro */
-  padding: 20px;
+  background-color: #2F0434; 
+  padding: 0px;
   text-align: center;
   overflow: hidden;
+  flex-wrap: wrap;
   position: relative;
 }
 
-/* Texto animado */
+
 .animated-text {
   font-size: 24px;
   color: white;
@@ -66,7 +66,6 @@
   animation: fade-slide 3s infinite ease-in-out;
 }
 
-/* Animación de desvanecimiento + desplazamiento */
 @keyframes fade-slide {
   0% {
     opacity: 0;
@@ -80,4 +79,26 @@
     opacity: 0;
     transform: translateX(-30px);
   }
+}
+
+.welcome {
+  text-align: center;
+  padding: 50px;
+}
+
+.welcome h1 {
+  font-size: 48px;
+}
+
+.welcome p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.welcome-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover; 
 }
