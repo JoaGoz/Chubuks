@@ -9,19 +9,27 @@ const phrases = [
 ];
 
 const PhraseBanner = () => {
-  const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPhrase((prev) => (prev + 1) % phrases.length);
-    }, 3000); 
+      setFadeOut(true);
+
+      setTimeout(() => {
+        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+        setFadeOut(false); 
+      }, 900);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="phrase-banner">
-      <p className="animated-text">{phrases[currentPhrase]}</p>
+      <p className={`animated-text ${fadeOut ? "fade-out" : "fade-in"}`}>
+        {phrases[currentPhraseIndex]}
+      </p>
     </div>
   );
 };
