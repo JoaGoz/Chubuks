@@ -13,17 +13,20 @@ const PhraseBanner = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeOut(true);
+    const fadeTimer = setTimeout(() => {
+      setFadeOut(true); 
+    }, 4000);
 
-      setTimeout(() => {
-        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-        setFadeOut(false); 
-      }, 900);
-    }, 2500);
+    const changePhraseTimer = setTimeout(() => {
+      setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+      setFadeOut(false); 
+    }, 3000); // 🔹
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(changePhraseTimer);
+    };
+  }, [currentPhraseIndex]);
 
   return (
     <div className="phrase-banner">
