@@ -15,12 +15,12 @@ const PhraseBanner = () => {
   useEffect(() => {
     const fadeTimer = setTimeout(() => {
       setFadeOut(true); 
-    }, 4000);
+    }, 6000);
 
     const changePhraseTimer = setTimeout(() => {
       setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
       setFadeOut(false); 
-    }, 3000); // 🔹
+    }, 7000); 
 
     return () => {
       clearTimeout(fadeTimer);

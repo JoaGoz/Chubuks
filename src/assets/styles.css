@@ -73,7 +73,7 @@
   color: white;
   font-weight: bold;
   position: relative;
-  animation: fade-slide 3s infinite ease-in-out;
+  animation: fade-slide 7s infinite ease-in-out;
 }
 
 @keyframes fade-slide {
@@ -81,7 +81,15 @@
     opacity: 0;
     transform: translateX(30px);
   }
+  25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
   50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  75% {
     opacity: 1;
     transform: translateX(0);
   }
