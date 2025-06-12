@@ -4,6 +4,7 @@ import PhraseBanner from "../components/PhraseBanner";
 import Welcome from "../components/Welcome";
 import Aboutus from "../components/Aboutus"
 import Comment from "../components/Comment"
+import Footer from "../components/Footer"
 import "../assets/styles.css";
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Welcome />
       <Aboutus />
       <Comment />
+      <Footer />
     </>
   );
 };
