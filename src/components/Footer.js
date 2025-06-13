@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles.css";
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,9 +8,9 @@ const Footer = () => {
       <div className="footer-left">
         <p>© Derechos reservados por ChuBucks</p>
         <div className="social-icons">
-          <a href="https://facebook.com" aria-label="Facebook">📘</a>
-          <a href="https://youtube.com" aria-label="YouTube">▶️</a>
-          <a href="https://instagram.com" aria-label="Instagram">📸</a>
+          <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
+          <a href="https://youtube.com" aria-label="YouTube"><FaYoutube /></a>
+          <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
         </div>
       </div>
 

@@ -147,37 +147,70 @@
   color: white
 }
 
+.comment-section {
+  padding: 40px 20px;
+  color: #fefefe;
+  text-align: center;
+  background: linear-gradient(to left, #2c1a5b, #4a90e2); 
+}
+
+.comment-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.comment-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #7fa4d4;
+}
+
 .comment-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
+}
+
+.comment-form textarea {
   width: 100%;
-  max-width: 500px;
-}
-
-textarea {
-  height: 120px;
-  padding: 10px;
+  max-width: 600px;
+  height: 140px;
+  padding: 15px;
   font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  box-shadow: none;
 }
 
-button {
-  background-color: #4a90e2;
+.comment-form button {
+  background-color: #530e6e;
   color: white;
-  padding: 10px;
-  cursor: pointer;
+  padding: 10px 25px;
+  font-size: 16px;
   border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #3a78c2;
 }
 
 .error-message {
-  color: red;
+  color: #d00;
   font-size: 14px;
+  margin-top: -10px;
 }
+
 
 .footer {
   background-color: #2c1a5b;
   color: white;
-  padding: 40px 20px;
+  padding: 40px 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
